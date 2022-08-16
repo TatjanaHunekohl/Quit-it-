@@ -1,0 +1,434 @@
+/* neucha-regular - latin */
+@font-face {
+    font-family: 'Neucha';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('fonts/neucha-v17-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/neucha-v17-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*  gloab style */
+
+* {
+    margin: 0 auto;
+    font-family: 'Neucha';
+}
+
+.d-none {
+    display: none;
+}
+
+.opacity05 {
+    filter: opacity(0.5);
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.wibble {
+
+    height: 60px;
+    width: auto;
+    position: absolute;
+    z-index: 20;
+    bottom: 50px;
+    left: -10px;
+    animation: wibble .5s ease-in-out infinite alternate;
+}
+
+@keyframes wibble {
+    from {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+.line1 {
+    right: 20px;
+    z-index: 30;
+    display: none;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    animation: top-in-l1 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes top-in-l1 {
+    from {
+        top: -300px;
+    }
+
+    to {
+        top: -10px;
+    }
+}
+
+.line2 {
+    right: 40px;
+    z-index: 30;
+    display: none;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    animation: top-in-l2 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes top-in-l2 {
+    0% {
+        top: -50px;
+    }
+
+    50% {
+        top: -300px;
+    }
+
+    100% {
+        top: -10px;
+    }
+}
+
+
+
+/* left section style ----------------------------------- */
+
+.left-sctn {
+    width: 100%;
+    height: 50%;
+    background-color: #f8cbb7;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+.left-sctn::after {
+    content: "";
+    background-image: url('img/welle.svg');
+    position: absolute;
+    top: 0;
+    right: -99.6%;
+    bottom: 0;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    left: 40px;
+}
+
+
+
+/* Right section style ------------------------*/
+
+.lets-go-btn,
+.nochmal-btn {
+    border-radius: 4px;
+    border: none;
+    padding: 20px 40px;
+    background-color: #ec857e;
+    transform: rotate(-20deg);
+    transition: .3s ease-in-out;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.nochmal-btn {
+    position: relative;
+    top: 140px;
+    transition: .3s ease-in-out;
+}
+
+.lets-go-btn:hover,
+.nochmal-btn:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    letter-spacing: 10px;
+    transform: rotate(10deg);
+    background-color: #ff7268;
+}
+
+.right-sctn {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #472b9d;
+}
+
+.overlay {
+    z-index: 30;
+    height: 478px;
+    width: 232px;
+    position: absolute;
+}
+
+.wrapper-answers {
+    margin: 0 0;
+}
+
+.answer1 {
+    background-image: url('img/answer1.svg');
+}
+
+.answer2 {
+    background-image: url('img/answer2.svg');
+}
+
+.answer3 {
+    background-image: url('img/answer3.svg');
+}
+
+.answer4 {
+    background-image: url('img/answer4.svg');
+
+}
+
+.answer1:hover,
+.answer2:hover,
+.answer3:hover,
+.answer4:hover {
+    transform: rotate(-10deg);
+    cursor: pointer;
+}
+
+.answers {
+    display: flex;
+    line-height: .7;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: #f0f0f0;
+    background-repeat: no-repeat;
+    transition: .3s ease-in-out;
+    padding: 30px 60px;
+}
+
+.scribble {
+    cursor: pointer;
+    height: 75px;
+    width: auto;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    transition: .4s ease-in-out;
+}
+
+.scribble:hover {
+    transform: rotate(10deg);
+}
+
+.question {
+    padding-left: 24px;
+    font-size: 2.5rem;
+    color: #472b9d;
+    z-index: 40;
+}
+
+#test {
+    background-color: red;
+    height: 200px;
+    width: 100px;
+    z-index: 40;
+}
+
+/* Endscreen ----------------------*/
+
+.endscreen {
+    position: absolute;
+    top: 30%;
+    z-index: 40;
+    font-size: 3rem;
+    margin-left: 24px;
+}
+
+.wrapperFormatEndscreen {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+/* SVG in Ensscreen */
+
+.svg-wave {
+    position: absolute;
+    bottom: 40%;
+    z-index: 40;
+    width: 90%;
+}
+
+path {
+    stroke-dasharray: 400;
+    stroke-linecap: round;
+    animation-timing-function: ease-in;
+    animation: draw 2s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 400
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+/*  Media Queries  ---------------------------------*/
+
+@media(min-width: 400px) {
+
+    .line1,
+    .line2 {
+        display: block;
+    }
+
+    .nochmal-btn {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .nochmal-btn {
+        top: 220px;
+        left: 118px;
+    }
+}
+
+@media(min-width: 620px) {
+
+    .logo {
+        width: 260px;
+    }
+
+    .wrapper {
+        flex-direction: row;
+    }
+
+    .left-sctn {
+        width: 30%;
+        height: 100%;
+    }
+
+    .right-sctn {
+        width: 70%;
+        height: 100%;
+    }
+
+    .lets-go-btn {
+        z-index: 50;
+        padding: 2rem 3rem;
+    }
+
+    .left-sctn {
+        overflow-x: visible;
+    }
+
+    .line1 {
+        right: 20px;
+        display: initial;
+    }
+
+    .line2 {
+        right: 40px;
+        z-index: 20;
+        display: initial;
+    }
+
+    .wibble {
+        height: 70px;
+        left: 25vw;
+    }
+
+    .wrapper-answers {
+        margin-left: 147px;
+        margin-right: 0;
+    }
+
+    .endscreen {
+        font-size: 5rem;
+        margin-left: 0;
+    }
+
+    .nochmal-btn {
+        top: 78px;
+        padding: 1rem 4rem;
+    }
+
+    .lets-go-btn:hover,
+    .nochmal-btn:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        letter-spacing: 10px;
+    }
+
+    .svg-wave {
+        position: absolute;
+        z-index: 40;
+        bottom: 36%;
+    }
+}
+
+@media (min-width: 780px) {
+    .svg-wave {
+        bottom: 50%;
+    }
+
+    .question {
+        font-size: 3rem;
+    }
+
+    .answers {
+       font-size: 3rem;
+        padding: 50px 100px
+    }
+}
+
+@media (min-width: 1200px) {
+    .lets-go-btn {
+        font-size: 3.5rem;
+        padding: 20px 50px;
+    }
+
+    .line1,
+    .line2 {
+        height: 300px;
+    }
+
+    .left-sctn::after {
+        background-size: 70%;
+    }
+
+    .wibble {
+        height: 90px;
+        left: 30vw;
+    }
+
+    .logo {
+        width: 400px;
+    }
+}
